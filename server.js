@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 const sqlite3 = require('sqlite3');
-const db = new sqlite3.Database(process.env.TEST_DATABASE || './db.sqlite');
+const db = new sqlite3.Database(process.env.TEST_DATABASE || './database.sqlite');
 
 const PORT = process.env.PORT || 4000;
 
@@ -15,8 +15,11 @@ app.use(bodyParser.json());
 
 //const employeeRouter = express.Router();
 //app.use('/api/employees', employeeRouter);
-//const 
-
+//const timesheetsRouter = express.Router({mergeParams: true});
+//employeeRouter.use('/:id/timesheets', timesheetsRouter);
+//refactor all '/api/employees' to '/' 
+//refactor all 
+//refactor all '/api/employees/:id/timesheets' to '/'
 
 /*const validateEmployeeInput = (req, res, next) =>{
 	const employeeToCreate = req.body.employee;
